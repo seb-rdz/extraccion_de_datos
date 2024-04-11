@@ -1,5 +1,4 @@
 import pandas as pd 
-
 df = pd.read_excel("datos_facturacion.xlsx")
 #print(df.head())
 
@@ -11,7 +10,8 @@ df = pd.read_excel("datos_facturacion.xlsx")
 #print(filtro2)
 #filtro2.to_csv("practica_facturacion_2.csv")
 
-#filtro3=df[df["FECHA_ENT"] == '2022-28-2']
+#df['FECHAELAB'] = pd.to_datetime(df['FECHAELAB'])
+#filtro3=df[ df["FECHAELAB"].dt.strftime('%Y-%m-%d') == '2019-10-02']
 #print(filtro3)
 #filtro3.to_csv("practica_facturacion_3.csv")
 
@@ -27,8 +27,8 @@ df = pd.read_excel("datos_facturacion.xlsx")
 #print(filtro6)
 #filtro6.to_csv("practica_facturacion_6.csv")
 
-df1= pd.read_excel('datos_facturacion.xlsx', index_col=3)
+#df1= pd.read_excel('datos_facturacion.xlsx', index_col=3)
 #df1.head()
-filtro7=df1.loc[[1.0,2.0], ["FECHAELAB"]]
-print(filtro7)
-filtro7.to_csv("practica_facturacion_7.csv")
+#filtro7=df1.loc[[1.0,2.0], ["FECHAELAB"]]
+#print(filtro7)
+#filtro7.to_csv("practica_facturacion_7.csv")
